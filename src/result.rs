@@ -4,7 +4,12 @@ use std::io::Write;
 use colored::*;
 use crate::error;
 
-pub fn show_result( site_list : &Vec<String>, cons_valdar01_list : &Vec<f64>, arg_c : &String )
+pub fn show_result
+(
+	site_list          : &Vec<String>,
+	cons_valdar01_list : &Vec<f64>,
+	arg_c              : &String
+)
 {
 	if ( *site_list ).len() != ( *cons_valdar01_list ).len() { error::error_bomb( "site_ent_len_not_same" ); }
 
@@ -46,7 +51,11 @@ pub fn show_result( site_list : &Vec<String>, cons_valdar01_list : &Vec<f64>, ar
 	}
 }
 
-pub fn save_result( site_list : &Vec<String>, cons_valdar01_list : &Vec<f64>, arg_o : &String )
+pub fn save_result(
+	site_list          : &Vec<String>,
+	cons_valdar01_list : &Vec<f64>,
+	arg_o              : &String
+)
 {
 	let mut fout = File::create( ( *arg_o ).as_str() ).expect( "FAILED to open output file" );
 

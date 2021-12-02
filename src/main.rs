@@ -48,7 +48,12 @@ fn main()
 	*/
 
 	/* Sequence weighting. */
-	let weight_list : Vec<f64> = weighting::seq_weight( &( data.seq_list ), &( data.site_list ), &( opts.weight ) );
+	let weight_list : Vec<f64> = weighting::seq_weight
+	(
+		&( data.seq_list  ),
+		&( data.site_list ),
+		&( opts.weight    )
+	);
 
 	/*
 	println!( "\nSequence weighting :\n" );
@@ -57,7 +62,12 @@ fn main()
 	}
 	*/
 
-	let cons_valdar01_list : Vec<f64> = spmeasure::sum_of_pairs( &( data.site_list ), &weight_list, &( opts.matrix ) );
+	let cons_valdar01_list : Vec<f64> = spmeasure::sum_of_pairs
+	(
+		&( data.site_list ),
+		&weight_list,
+		&( opts.matrix    )
+	);
 
 	/*
 	for i in 0 .. cons_valdar01_list.len() {
@@ -66,10 +76,20 @@ fn main()
 	*/
 
 	/* Show result */
-	result::show_result( &( data.site_list ), &cons_valdar01_list, &( opts.colorize ) );
+	result::show_result
+	(
+		&( data.site_list ),
+		&cons_valdar01_list,
+		&( opts.colorize  )
+	);
 
 	/* Save result */
-	result::save_result( &( data.site_list ), &cons_valdar01_list, &( opts.output ) );
+	result::save_result
+	(
+		&( data.site_list ),
+		&cons_valdar01_list,
+		&( opts.output    )
+	);
 
 	println!( "{}", "\nProgram completed !!!\n".green() );
 

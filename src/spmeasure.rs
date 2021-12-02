@@ -8,7 +8,12 @@ use crate::matrices;
 /* Substitution scoring matrix */
 static mut M : Vec<f64> = Vec::new();
 
-pub fn sum_of_pairs( site_list : &Vec<String>, weight_list : &Vec<f64>, arg_m : &String ) -> Vec<f64>
+pub fn sum_of_pairs
+(
+	site_list   : &Vec<String>,
+	weight_list : &Vec<f64>,
+	arg_m       : &String
+) -> Vec<f64>
 {
 	let num_site : usize = ( *site_list ).len();
 
@@ -127,7 +132,12 @@ fn calc_lambda( weight_list : &Vec<f64>) -> f64
 	lambda
 }
 
-fn calc_sp( site : &String, weight_list : &Vec<f64>, aa_index : &HashMap<char, usize> ) -> f64
+fn calc_sp
+(
+	site        : &String,
+	weight_list : &Vec<f64>,
+	aa_index    : &HashMap<char, usize>
+) -> f64
 {
 	let     char_list : Vec<char> = ( *site ).chars().collect();
 	let mut sp_score  : f64       = 0.0;

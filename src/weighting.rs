@@ -2,10 +2,15 @@
 use std::collections::HashMap;
 use std::f64;
 
-/* Symbol frequency. */
-pub static mut SYMBOL : Vec<char> = Vec::new();
+/* Symbol frequency without gap. */
+static mut SYMBOL : Vec<char> = Vec::new();
 
-pub fn seq_weight( seq_list : &Vec<String>, site_list : &Vec<String>, arg_w : &String ) -> Vec<f64>
+pub fn seq_weight
+(
+	seq_list  : &Vec<String>,
+	site_list : &Vec<String>,
+	arg_w     : &String
+) -> Vec<f64>
 {
 	/* Amino acid list for Position-Based mothod. */
 	unsafe { SYMBOL = "ARNDCQEGHILKMFPSTWYV-".chars().collect(); }
