@@ -104,7 +104,7 @@ Site number `\t` Conservation score `\t` Composition of the site
 
 [e.g.] 
 
-<img width="931" alt="result" src="https://user-images.githubusercontent.com/83740080/142523471-ad55eb86-e429-4e23-917c-51c2c28e7179.png">  
+<img width="888" alt="readme_result_valdar01" src="https://user-images.githubusercontent.com/83740080/144342434-eb17dc05-b9c5-4ad9-aaf5-1867e27f3d4e.png">　
 
 ## References 
 
