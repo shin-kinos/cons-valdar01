@@ -1,6 +1,6 @@
 
-pub fn define_matrix( arg_m : &String ) -> Vec<f64>
-{
+pub fn define_matrix( arg_m : &String ) -> Vec<f64> {
+
 	/* 20 × 20 elements */
 	let mut _matrix : Vec<f64> = vec![ 0.0; 400 ];
 

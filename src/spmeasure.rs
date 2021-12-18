@@ -8,13 +8,12 @@ use crate::matrices;
 /* Substitution scoring matrix */
 static mut M : Vec<f64> = Vec::new();
 
-pub fn sum_of_pairs
-(
+pub fn sum_of_pairs(
 	site_list   : &Vec<String>,
 	weight_list : &Vec<f64>,
 	arg_m       : &String
-) -> Vec<f64>
-{
+) -> Vec<f64> {
+
 	let num_site : usize = ( *site_list ).len();
 
 	/* 
@@ -83,8 +82,8 @@ pub fn sum_of_pairs
 	sp_score_list
 }
 
-fn normalize_matrix( /* aa_list : &Vec<char>, aa_index : &HashMap<char, usize> */ ) -> Vec<f64>
-{
+fn normalize_matrix( /* aa_list : &Vec<char>, aa_index : &HashMap<char, usize> */ ) -> Vec<f64> {
+
 	let mut norm_matrix : Vec<f64> = vec![ 0.0; 400 ];
 
 	/*
@@ -116,8 +115,8 @@ fn normalize_matrix( /* aa_list : &Vec<char>, aa_index : &HashMap<char, usize> *
 	norm_matrix
 }
 
-fn calc_lambda( weight_list : &Vec<f64>) -> f64
-{
+fn calc_lambda( weight_list : &Vec<f64>) -> f64 {
+
 	let mut lambda : f64 = 0.0;
 	let weight_list_len : usize = ( *weight_list ).len();
 
@@ -132,13 +131,12 @@ fn calc_lambda( weight_list : &Vec<f64>) -> f64
 	lambda
 }
 
-fn calc_sp
-(
+fn calc_sp(
 	site        : &String,
 	weight_list : &Vec<f64>,
 	aa_index    : &HashMap<char, usize>
-) -> f64
-{
+) -> f64 {
+
 	let     char_list : Vec<char> = ( *site ).chars().collect();
 	let mut sp_score  : f64       = 0.0;
 	let     site_len  : usize     = char_list.len();
@@ -178,8 +176,8 @@ fn calc_sp
 	sp_score
 }
 
-fn check_matrix_diag()
-{
+fn check_matrix_diag() {
+
 	unsafe {
 		for a in 0 .. 20 {
 			for b in 0 .. 20 {

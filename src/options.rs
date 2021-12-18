@@ -12,8 +12,8 @@ pub struct Options {
 }
 
 impl Options {
-	pub fn new() -> Options
-	{
+	pub fn new() -> Options {
+
 		let argv : Vec<String> = env::args().collect();
 		let argc : usize = argv.len();
 
@@ -82,8 +82,8 @@ impl Options {
 		}
 	}
 
-	pub fn show_parameter( &self )
-	{
+	pub fn show_parameter( &self ) {
+
 		println!( "\nParameter set :" );
 		println!( "===========================================" );
 		println!( "Input filename      : {}", self.input        );
@@ -96,8 +96,8 @@ impl Options {
 	}
 }
 
-fn show_usage( arg : &String )
-{
+fn show_usage( arg : &String ) {
+
 	println!( "Usage: {} [Options] \n\nOptions :\n\n", *arg );
 	println!( "    -i    Input filename in aligned Multi-FASTA format, REQUIRED." );
 	println!( "    -o    Output filename, REQUIRED." );
